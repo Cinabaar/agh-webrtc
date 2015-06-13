@@ -1,0 +1,18 @@
+{
+  "name": "agh-webrtc",
+  "version": "0.0.0",
+  "description": "agh-webrtc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "Dawid Romanowski, Wojciech Czarny",
+  "dependencies": {
+    "express": "^4.12.4",
+    "node-uuid": "^1.4.3",
+    "socket.io": "^1.3.5"
+  }
+}
