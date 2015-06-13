@@ -1,0 +1,10 @@
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.video-wrapper:after {
+    content: ' ';
+    clear: both;
+    display: block;
+}
