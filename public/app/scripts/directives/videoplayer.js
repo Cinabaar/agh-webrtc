@@ -3,7 +3,7 @@
 angular.module('publicApp')
   .directive('videoPlayer', function ($sce) {
     return {
-      template: '<div><video ng-src="{{trustSrc()}}" autoplay></video></div>',
+      template: '<video ng-src="{{trustSrc()}}" autoplay></video>',
       restrict: 'E',
       replace: true,
       scope: {

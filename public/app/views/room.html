@@ -10,14 +10,14 @@
 <div>
   <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
 </div>
-
-
-<div class="video-wrapper">
-  <video-player class="col-md-4" ng-repeat="peer in peers" vid-src="{{peer.stream}}"></video-player>
-</div>
-
-<div class="video-wrapper">
-  <div class="col-md-2">
-    <video ng-src="{{getLocalVideo()}}" autoplay muted></video>
+<div class="row">
+  <div class="col-xs-4">
+    <div class="embed-responsive embed-responsive-16by9">
+      <video class="embed-responsive-item" ng-src="{{getLocalVideo()}}" autoplay muted></video>
+    </div>
+    <div class="embed-responsive embed-responsive-16by9" ng-repeat="peer in peers">
+      <video-player class="embed-responsive-item" vid-src="{{peer.stream}}"></video-player>
+    </div>
   </div>
 </div>
+

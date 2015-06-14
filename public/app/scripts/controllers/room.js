@@ -33,9 +33,9 @@ angular.module('publicApp')
     $scope.peers = [];
     Room.on('peer.stream', function (peer) {
       $scope.peers.push({
-        id: peer.id,
-        stream: URL.createObjectURL(peer.stream)
-      });
+            id: peer.id,
+            stream: URL.createObjectURL(peer.stream)
+          });
     });
     Room.on('peer.disconnected', function (peer) {
       $scope.peers = $scope.peers.filter(function (p) {
