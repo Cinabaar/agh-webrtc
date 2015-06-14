@@ -15,7 +15,9 @@
     <div class="embed-responsive embed-responsive-16by9">
       <video class="embed-responsive-item" ng-src="{{getLocalVideo()}}" autoplay muted></video>
     </div>
-    <div class="embed-responsive embed-responsive-16by9" ng-repeat="peer in peers">
+  </div>
+  <div class="col-xs-4" ng-repeat="peer in peers">
+    <div class="embed-responsive embed-responsive-16by9">
       <video-player class="embed-responsive-item" vid-src="{{peer.stream}}"></video-player>
     </div>
   </div>
