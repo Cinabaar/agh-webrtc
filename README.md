@@ -28,6 +28,9 @@ wykorzystującym protokół STUN (Session Traversal Utilities for NAT)
 6) Po nawiązaniu połączenia dalsza komunikacja odbywa się na zasadzie p2p, bez udziału serwera, 
 z wykorzystaniem protokoły WebRTC 
 
+![Flow diagram](http://i.imgur.com/WvvDGLR.png)
+
+
 ### Wybrane elementy implementacji
 
 #### Serwer
@@ -87,5 +90,44 @@ Kontroler Room:
 - stwórz, lub dodaj się do odpowiedniego pokoju
 - wrzuć guid pokoju do url
 - kiedy otrzymasz peer.streem, dodaj strumień do listy dostępnych strumieni
+
+### Instalacja lokalna
+
+Jako, że wykorzystane zostały standardowe narzędzia (yeoman, npm, bower), instalacja powinna być bardzo prosta.
+
+#### Wymagania
+
+Zainstalowany npm, node.js, bower
+
+#### Instrukcja instalacji
+
+W katalogu głównym: npm install
+
+W katalogu public: npm install && bower install
+
+#### Instrukcja uruchomienia
+
+W katalogu głównym: node index.js
+
+#### Wszystko razem
+
+cd agh-webrtc
+
+npm install
+
+cd public 
+
+npm install && bower install
+
+cd ..
+
+node index.js
+
+
+### Potencjalne dodatki / usprawnienia
+
+- Przy dużej ilości klientów może działać wolno ponieważ strumień jest każdorazowo kompresowany i wysyłany po stronie klienta do każdego z pozostałych klientów.
+- W tym momencie jeśli użytkownik nie da uprawnień do video to nic nie będzie działało. Wynika to z tego, że cała logika programu jest callbackiem na uzyskanie uprawnień. Można to dość łatwo zmienić, ale na obecną chwilę działa zadowalająco.
+- Można dodać chat.
 
 
